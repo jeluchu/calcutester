@@ -1,2 +1,2 @@
-![Icono GDM](./fotos/foto.png)
+![Icono GDM](./fotos/intro.png)
 
