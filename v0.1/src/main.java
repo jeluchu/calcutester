@@ -1,6 +1,6 @@
 /**
 *
-* @authors Eric Martin Jesus Calderon
+* @author Eric Martin / Jesus Calderon
 * @version 1.0
 */
 
