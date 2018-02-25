@@ -50,14 +50,25 @@ public class main {
             System.out.println("\n\n");
       
  switch(opcion){
-	 case '1':
-		System.out.println("Introduce el primer número:");			
+	
+	case 1:System.out.println("Introduce el primer número:");			
 		numero1 = teclado.nextDouble();
 		System.out.println("Introduce el segundo número:");
 		numero2 = teclado.nextDouble();
 		resultado = numero1+numero2;
-		System.out.println("La suma es " + numero1 + " + " + numero2 + " = " + resultado);
-	 case '8': salir=true; 
+		break;
+	case 2:System.out.println("Introduce el primer número:");			
+		numero1 = teclado.nextDouble();
+		System.out.println("Introduce el segundo número:");
+		numero2 = teclado.nextDouble();
+		resultado = numero1-numero2;
+		break;
+	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
+		salir=true;
+		break;
+	default:System.out.println("Introduzca una opción de las anteriores, por favor");
+		break;
 	}//fin switch
+	      System.out.println("El resultado es: " + resultado);
 	}
 }
