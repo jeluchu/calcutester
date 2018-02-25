@@ -1,14 +1,19 @@
-//import java.util.*;
+/**
+*
+* @authors Eric Martin Jesus Calderon
+* @version 1.0
+*/
+
+import java.util.*;
 
 public class main {
 	
 
 	public static void main(String[] args)  {
-    	
-       // Scanner sn = new Scanner(System.in);
+	Scanner teclado = new Scanner(System.in);
        // Scanner waitForKeypress = new Scanner(System.in);
         		
-       // boolean salir = false;
+       	boolean salir = false;
         int opcion;
         
 		double numero1, numero2, resultado;
@@ -22,7 +27,7 @@ public class main {
 		String NEGRITA = "\u001B[1m";
 		String AZULETE = "\u001B[1;36m";
 		
-      //  while (!salir) {
+      while (!salir) {
         	System.out.println("CALCUTESTER v0.1\n\n");
         						 
             System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
@@ -43,6 +48,16 @@ public class main {
             
             System.out.println("┃        "+AMARILLO+"PRÓXIMAMENTE NUEVAS FUNCIONES"+NORMAL+"                                ┃");
             System.out.println("\n\n");
-       
+      
+ switch(opcion){
+	 case '1':
+		System.out.println("Introduce el primer número:");			
+		numero1 = teclado.nextDouble();
+		System.out.println("Introduce el segundo número:");
+		numero2 = teclado.nextDouble();
+		resultado = numero1+numero2;
+		System.out.println("La suma es " + numero1 + " + " + numero2 + " = " + resultado);
+	 case '8': salir=true; 
+	}//fin switch
 	}
 }
