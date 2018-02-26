@@ -74,8 +74,12 @@ public class main {
 			System.out.println("No es posible realizar la division por 0.\n");
 		break;
 		 
-	 case 5: resultado= Math.pow(numero1, numero2);
-		 break;
+	case 5: resultado= Math.pow(numero1, numero2);
+		break;
+		 
+	case 6: System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
+      		System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
+		break;
 		 
 	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
