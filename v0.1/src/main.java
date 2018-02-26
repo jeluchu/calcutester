@@ -47,8 +47,8 @@ public class main {
         System.out.println("┃        Pulsa 4 si deseas realizar una división                      ┃");
         System.out.println("┃        Pulsa 5 si deseas realizar una potencia                      ┃");
         System.out.println("┃        Pulsa 6 si deseas realizar una raíz                          ┃");
-        System.out.println("┃        Pulsa 7 si deseas realizar un logaritmo                      ┃");
-        System.out.println("┃        Pulsa 8 si deseas realizar una operacion factorial           ┃");
+        System.out.println("┃        Pulsa 7 si deseas realizar una operacion factorial           ┃");
+        System.out.println("┃        Pulsa 8 si deseas realizar un logaritmo                      ┃");
         System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
         System.out.println("┃        Pulsa 0 si deseas salir                                      ┃");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
@@ -88,8 +88,12 @@ public class main {
 		}
 		resultado=factorial;
 		break;
+		 
+		 
+	case 8:	 /*(Math.log(num)/Math.log(2));*/
+		 break;
 		
-	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
+	case 0: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
 		break;
 		 
