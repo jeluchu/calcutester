@@ -12,12 +12,12 @@ public class main {
 
 	public static void main(String[] args)  {
 	Scanner teclado = new Scanner(System.in);
-       // Scanner waitForKeypress = new Scanner(System.in);
         		
        	boolean salir = false;
         int opcion;
         
 		double numero1, numero2, resultado;
+		double factorial = 1;
 		
 		String ANSI_RED_BACKGROUND = "\u001B[41m";
 		String ROJO = "\u001B[1;31m";
@@ -81,6 +81,14 @@ public class main {
       		System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
 		break;
 		 
+	case 7: System.out.println("Se procedera a calcular el factorial del primer numero...");
+		while ( numero1!=0) {
+  			factorial=factorial*numero1;
+  			numero1--;
+		}
+		resultado=factorial;
+		break;
+		
 	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
 		break;
