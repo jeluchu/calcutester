@@ -28,60 +28,58 @@ public class main {
 		String AZULETE = "\u001B[1;36m";
 		
       while (!salir) {
-        	System.out.println("CALCUTESTER v0.1\n\n");
-        						 
-            System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-            System.out.println("┃        "+AZUL+"¿Qué operación deseas realizar?"+NORMAL+"                              ┃");
-            System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
-            System.out.println("┃        Pulsa 1 si deseas realizar una suma                          ┃");
-            System.out.println("┃        Pulsa 2 si deseas realizar una resta                         ┃");
-            System.out.println("┃        Pulsa 3 si deseas realizar una multiplicación                ┃");
-            System.out.println("┃        Pulsa 4 si deseas realizar una división                      ┃");
-            System.out.println("┃        Pulsa 5 si deseas realizar una potencia                      ┃");
-            System.out.println("┃        Pulsa 6 si deseas realizar una raíz                          ┃");
-            System.out.println("┃        Pulsa 7 si deseas realizar un logaritmo                      ┃");
-            System.out.println("┃        Pulsa 8 si deseas realizar una operacion factorial           ┃");
-            System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
-            System.out.println("┃        Pulsa 0 si deseas salir                                      ┃");
-            System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	      
+        System.out.println("CALCUTESTER v0.1\n\n");
+        System.out.println("Vamos a empezar introduciendo los operandos:");	
+	System.out.println("Por favor introduzca el primer operando:");			
+	numero1 = teclado.nextDouble();
+	System.out.println("A continuación introduzca el segundo operando:");
+	numero2 = teclado.nextDouble();
+	      
+	      
+        System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+        System.out.println("┃        "+AZUL+"¿Qué operación deseas realizar?"+NORMAL+"                              ┃");
+        System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
+        System.out.println("┃        Pulsa 1 si deseas realizar una suma                          ┃");
+        System.out.println("┃        Pulsa 2 si deseas realizar una resta                         ┃");
+        System.out.println("┃        Pulsa 3 si deseas realizar una multiplicación                ┃");
+        System.out.println("┃        Pulsa 4 si deseas realizar una división                      ┃");
+        System.out.println("┃        Pulsa 5 si deseas realizar una potencia                      ┃");
+        System.out.println("┃        Pulsa 6 si deseas realizar una raíz                          ┃");
+        System.out.println("┃        Pulsa 7 si deseas realizar un logaritmo                      ┃");
+        System.out.println("┃        Pulsa 8 si deseas realizar una operacion factorial           ┃");
+        System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
+        System.out.println("┃        Pulsa 0 si deseas salir                                      ┃");
+        System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
             
             
-            System.out.println("┃        "+AMARILLO+"PRÓXIMAMENTE NUEVAS FUNCIONES"+NORMAL+"                                ┃");
-            System.out.println("\n\n");
+        System.out.println("┃        "+AMARILLO+"PRÓXIMAMENTE NUEVAS FUNCIONES"+NORMAL+"                                ┃");
+        System.out.println("\n\n");
       
  switch(opcion){
 	
-	case 1:System.out.println("Introduce el primer número:");			
-		numero1 = teclado.nextDouble();
-		System.out.println("Introduce el segundo número:");
-		numero2 = teclado.nextDouble();
-		resultado = numero1+numero2;
+	case 1:resultado = numero1+numero2;
 		break;
-	case 2:System.out.println("Introduce el primer número:");			
-		numero1 = teclado.nextDouble();
-		System.out.println("Introduce el segundo número:");
-		numero2 = teclado.nextDouble();
-		resultado = numero1-numero2;
+		 
+	case 2:resultado = numero1-numero2;
 		break;
-	case 3:System.out.println("Introduce el primer número:");			
-		numero1 = teclado.nextDouble();
-		System.out.println("Introduce el segundo número:");
-		numero2 = teclado.nextDouble();
-		resultado = numero1*numero2;
-		break;	 
-	case 4: System.out.println("Introduce el primer número:");			
-		numero1 = teclado.nextDouble();
-		System.out.println("Introduce el segundo número:");
-		numero2 = teclado.nextDouble();
-		 if (numero2 !=0){
-			resultado = numero1/numero2;}
-		 else System.out.println("No es posible realizar la division por 0.\n");
+		 
+	case 3:resultado = numero1*numero2;
 		break;
+		 
+	case 4: if (numero2 !=0)
+			resultado = numero1/numero2;
+		else 
+			System.out.println("No es posible realizar la division por 0.\n");
+		break;
+		 
 	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
 		break;
+		 
 	default:System.out.println("Introduzca una opción de las anteriores, por favor");
 		break;
+		 
 	}//fin switch
 	      System.out.println("El resultado es: " + resultado);
 	}
