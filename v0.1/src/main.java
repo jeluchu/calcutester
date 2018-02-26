@@ -69,6 +69,14 @@ public class main {
 		numero2 = teclado.nextDouble();
 		resultado = numero1*numero2;
 		break;	 
+	case 4: System.out.println("Introduce el primer número:");			
+		numero1 = teclado.nextDouble();
+		System.out.println("Introduce el segundo número:");
+		numero2 = teclado.nextDouble();
+		 if (numero2 !=0){
+			resultado = numero1/numero2;}
+		 else System.out.println("No es posible realizar la division por 0.\n");
+		break;
 	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
 		break;
