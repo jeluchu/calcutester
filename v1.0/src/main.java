@@ -1,3 +1,5 @@
+package calculadora;
+
 /**
 *
 * @author Eric Martin / Jesus Calderon
@@ -7,20 +9,21 @@
 import java.util.*;
 import java.lang.Math;
 
-public class main {
+public class Main {
 
 	
+	private static Scanner teclado;
+
 	public static void main(String[] args)  {
 		
+		
 		//WE IMPORT THE DATA SCANNER
-		Scanner sn = new Scanner(System.in);
-		Scanner waitForKeypress = new Scanner(System.in);
-		Scanner teclado = new Scanner(System.in);
+		teclado = new Scanner(System.in);
         		
        	boolean salir = false;
         int opcion;
         
-		double numero1, numero2, resultado;
+		double numero1, numero2, resultado=0;
 		double factorial = 1;
 		
 		String ANSI_RED_BACKGROUND = "\u001B[41m";
@@ -67,34 +70,38 @@ public class main {
     	
     
       System.out.print("|            Escribe una de las opciones: ");
-      opcion = sn.nextInt();
+      opcion = teclado.nextInt();
       System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
   
       switch (opcion) {
 	
       case 1:
     	  resultado = numero1+numero2;
-    	  System.out.println("El resultado de la suma es " + resultado);
+    	  System.out.println("El resultado de la operación es: " + resultado);
+    	
       break;
 		 
       case 2:
     	  resultado = numero1-numero2;
-    	  System.out.println("El resultado de la resta es " + resultado);
+    	  System.out.println("El resultado de la operación es: " + resultado);
 	  break;
 		 
       case 3:
     	  resultado = numero1*numero2;
+    	  System.out.println("El resultado de la operación es: " + resultado);
       break;
 		 
       case 4: 
-    	  if (numero2 !=0)
+    	  if (numero2 !=0) {
 			resultado = numero1/numero2;
+    	    System.out.println("El resultado de la operación es: " + resultado);}
     	  else 
 			System.out.println("No es posible realizar la division por 0.\n");
       break;
 		 
       case 5:
     	  resultado= Math.pow(numero1, numero2);
+    	  System.out.println("El resultado de la operación es: " + resultado);
       break;
 		 
       case 6: 
@@ -108,10 +115,15 @@ public class main {
   			numero1--;
 		}
 		resultado=factorial;
+		System.out.println("El resultado de la operación es: " + resultado);
 		break;
 		 
 		 
-	case 8:	 /*(Math.log(num)/Math.log(2));*/
+	case 8:	System.out.println("Vamos a calcular el logaritmo del primer numero");
+			System.out.print("Por favor introduzca la base deseada: ");
+			int base=teclado.nextInt();
+			resultado =(Math.log(numero1)/Math.log(base));
+			System.out.println("El resultado de la operación es: " + resultado);
 		 break;
 		
 	case 0: System.out.println("Gracias por utilizar nuestra calculadora");
@@ -124,9 +136,8 @@ public class main {
 	}//fin switch
     
       System.out.print("|     Presiona la tecla Enter para continuar");
-      waitForKeypress.nextLine(); 
-	
-    
+      teclado.nextLine(); 
+  
 	}
 }
 }
