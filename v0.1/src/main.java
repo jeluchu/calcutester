@@ -5,6 +5,7 @@
 */
 
 import java.util.*;
+import java.lang.Math;
 
 public class main {
 	
@@ -30,7 +31,7 @@ public class main {
       while (!salir) {
 	      
         System.out.println("CALCUTESTER v0.1\n\n");
-        System.out.println("Vamos a empezar introduciendo los operandos:");	
+        System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");	
 	System.out.println("Por favor introduzca el primer operando:");			
 	numero1 = teclado.nextDouble();
 	System.out.println("A continuación introduzca el segundo operando:");
@@ -72,6 +73,9 @@ public class main {
 		else 
 			System.out.println("No es posible realizar la division por 0.\n");
 		break;
+		 
+	 case 5: resultado= Math.pow(numero1, numero2);
+		 break;
 		 
 	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
