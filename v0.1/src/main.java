@@ -63,6 +63,12 @@ public class main {
 		numero2 = teclado.nextDouble();
 		resultado = numero1-numero2;
 		break;
+	case 3:System.out.println("Introduce el primer número:");			
+		numero1 = teclado.nextDouble();
+		System.out.println("Introduce el segundo número:");
+		numero2 = teclado.nextDouble();
+		resultado = numero1*numero2;
+		break;	 
 	case 8: System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
 		break;
