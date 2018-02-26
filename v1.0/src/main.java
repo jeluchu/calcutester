@@ -8,10 +8,14 @@ import java.util.*;
 import java.lang.Math;
 
 public class main {
-	
 
+	
 	public static void main(String[] args)  {
-	Scanner teclado = new Scanner(System.in);
+		
+		//WE IMPORT THE DATA SCANNER
+		Scanner sn = new Scanner(System.in);
+		Scanner waitForKeypress = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
         		
        	boolean salir = false;
         int opcion;
@@ -29,13 +33,18 @@ public class main {
 		String AZULETE = "\u001B[1;36m";
 		
       while (!salir) {
-	      
+    	//CLEAN
+    	System.out.print("\033[H\033[2J");
+    	System.out.flush();
+    	
         System.out.println("CALCUTESTER v0.1\n\n");
-        System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");	
-	System.out.println("Por favor introduzca el primer operando:");			
-	numero1 = teclado.nextDouble();
-	System.out.println("A continuación introduzca el segundo operando:");
-	numero2 = teclado.nextDouble();
+        System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
+        
+        System.out.print("Por favor introduzca el primer operando: ");			
+        numero1 = teclado.nextDouble();
+        
+        System.out.print("A continuación introduzca el segundo operando: ");
+		numero2 = teclado.nextDouble();
 	      
 	      
         System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
@@ -53,33 +62,45 @@ public class main {
         System.out.println("┃        Pulsa 0 si deseas salir                                      ┃");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
             
-            
-        System.out.println("┃        "+AMARILLO+"PRÓXIMAMENTE NUEVAS FUNCIONES"+NORMAL+"                                ┃");
-        System.out.println("\n\n");
-      
- switch(opcion){
+          
+    
+    	
+    
+      System.out.print("|            Escribe una de las opciones: ");
+      opcion = sn.nextInt();
+      System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+  
+      switch (opcion) {
 	
-	case 1:resultado = numero1+numero2;
-		break;
+      case 1:
+    	  resultado = numero1+numero2;
+    	  System.out.println("El resultado de la suma es " + resultado);
+      break;
 		 
-	case 2:resultado = numero1-numero2;
-		break;
+      case 2:
+    	  resultado = numero1-numero2;
+    	  System.out.println("El resultado de la resta es " + resultado);
+	  break;
 		 
-	case 3:resultado = numero1*numero2;
-		break;
+      case 3:
+    	  resultado = numero1*numero2;
+      break;
 		 
-	case 4: if (numero2 !=0)
+      case 4: 
+    	  if (numero2 !=0)
 			resultado = numero1/numero2;
-		else 
+    	  else 
 			System.out.println("No es posible realizar la division por 0.\n");
-		break;
+      break;
 		 
-	case 5: resultado= Math.pow(numero1, numero2);
-		break;
+      case 5:
+    	  resultado= Math.pow(numero1, numero2);
+      break;
 		 
-	case 6: System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
-      		System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
-		break;
+      case 6: 
+    	  System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
+      	  System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
+	  break;
 		 
 	case 7: System.out.println("Se procedera a calcular el factorial del primer numero...");
 		while ( numero1!=0) {
@@ -101,6 +122,11 @@ public class main {
 		break;
 		 
 	}//fin switch
-	      System.out.println("El resultado es: " + resultado);
+    
+      System.out.print("|     Presiona la tecla Enter para continuar");
+      waitForKeypress.nextLine(); 
+	
+    
 	}
+}
 }
