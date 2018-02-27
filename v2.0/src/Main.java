@@ -1,8 +1,4 @@
-<<<<<<< HEAD:v2.0/src/Main.java
 
-=======
-package calculadora;
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
 
 /**
 *
@@ -83,33 +79,19 @@ public class Main {
     	  resultado = numero1+numero2;
     	  System.out.println("El resultado de la operación es: " + resultado);
     	
-<<<<<<< HEAD:v2.0/src/Main.java
     break;
-=======
-      break;
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
 		 
     case 2: //SUBTRACTION
     	  resultado = numero1-numero2;
     	  System.out.println("El resultado de la operación es: " + resultado);
-<<<<<<< HEAD:v2.0/src/Main.java
 	break;
-=======
-	  break;
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
 		 
     case 3: //MULTIPLICATION
     	  resultado = numero1*numero2;
     	  System.out.println("El resultado de la operación es: " + resultado);
-<<<<<<< HEAD:v2.0/src/Main.java
     break;
 		 
     case 4: //DIVISION
-=======
-      break;
-		 
-      case 4: 
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
     	  if (numero2 !=0) {
 			resultado = numero1/numero2;
     	    System.out.println("El resultado de la operación es: " + resultado);}
@@ -120,11 +102,7 @@ public class Main {
     case 5: //POWERS
     	  resultado= Math.pow(numero1, numero2);
     	  System.out.println("El resultado de la operación es: " + resultado);
-<<<<<<< HEAD:v2.0/src/Main.java
     break;
-=======
-      break;
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
 		 
     case 6: //SQUARE ROOTS
     	  System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
@@ -142,7 +120,6 @@ public class Main {
 		break;
 		 
 		 
-<<<<<<< HEAD:v2.0/src/Main.java
 	case 8:	//LOGARITHM
 		System.out.println("Vamos a calcular el logaritmo del primer numero");
 		System.out.print("Por favor introduzca la base deseada: ");
@@ -150,14 +127,6 @@ public class Main {
 		resultado =(Math.log(numero1)/Math.log(base));
 		System.out.println("El resultado de la operación es: " + resultado);
 	break;
-=======
-	case 8:	System.out.println("Vamos a calcular el logaritmo del primer numero");
-			System.out.print("Por favor introduzca la base deseada: ");
-			int base=teclado.nextInt();
-			resultado =(Math.log(numero1)/Math.log(base));
-			System.out.println("El resultado de la operación es: " + resultado);
-		 break;
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
 		
 	case 0: //EXIT
 		System.out.println("Gracias por utilizar nuestra calculadora");
@@ -178,12 +147,6 @@ public class Main {
       System.out.print("|     Presiona la tecla Enter para continuar");
       teclado.nextLine(); 
   
-<<<<<<< HEAD:v2.0/src/Main.java
 	}
 	}
 }
-=======
-	}
-}
-}
->>>>>>> 58e6b7eeee71e6ebb1e578339dc80a801405c3a9:v1.0/src/main.java
