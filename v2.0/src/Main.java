@@ -40,8 +40,9 @@ public class Main {
     	System.out.print("\033[H\033[2J");
     	System.out.flush();
 	      
-	//EXLUSION OF THE LETTERS      
+    //EXLUSION OF THE LETTERS      
     try {
+	    
         System.out.println("CALCUTESTER v2.0\n\n");
         System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
         
@@ -95,10 +96,10 @@ public class Main {
 		 
     case 4: //DIVISION
     	  if (numero2 !=0) {
-			resultado = numero1/numero2;
-    	    System.out.println("El resultado de la divión es: " + resultado);}
+		resultado = numero1/numero2;
+    	    	System.out.println("El resultado de la divión es: " + resultado);}
     	  else 
-			System.out.println("No es posible realizar la division por 0\n");
+		System.out.println("No es posible realizar la division por 0\n");
     break;
 		 
     case 5: //POWERS
@@ -112,34 +113,35 @@ public class Main {
 	  System.out.println("Raiz cuadrada de ("Math.pow(numero1, 1/numero2)");
     break;
 		 
-	case 7: //FACTORIAL
-		System.out.println("Se procedera a calcular el factorial del primer numero...");
-		while ( numero1!=0) {
-  			factorial=factorial*numero1;
-  			numero1--;
-		}
-		resultado=factorial;
-		System.out.println("El resultado de los factoriales es: " + resultado);
-		break;
+    case 7: //FACTORIAL
+	  System.out.println("Se procedera a calcular el factorial del primer numero...");
+	  while ( numero1!=0) {
+  		factorial=factorial*numero1;
+  		numero1--;
+	  }
+	  resultado=factorial;
+	  System.out.println("El resultado de los factoriales es: " + resultado);
+    break;
 		 
 		 
-	case 8:	//LOGARITHM
-		System.out.println("Vamos a calcular el logaritmo del primer numero");
-		System.out.print("Por favor introduzca la base deseada: ");
-		int base=teclado.nextInt();
-		resultado =(Math.log(numero1)/Math.log(base));
-		System.out.println("El resultado del logaritmo es: " + resultado);
-	break;
+    case 8://LOGARITHM
+	  System.out.println("Vamos a calcular el logaritmo del primer numero");
+	  System.out.print("Por favor introduzca la base deseada: ");
+	  int base=teclado.nextInt();
+	  resultado =(Math.log(numero1)/Math.log(base));
+	  System.out.println("El resultado del logaritmo es: " + resultado);
+    break;
 		
-	case 0: //EXIT
+    case 0: //EXIT
 		System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
-	break;
+    break;
 		 
-	default:System.out.println("Introduzca una opción de las anteriores, por favor");
-	break;
+    default:System.out.println("Introduzca una opción de las anteriores, por favor");
+    break;
 		 
    }//END SWITCH
+			     
    } catch (InputMismatchException e) {
 	   System.out.println("|\t      Tienes que insertar un número\n");
 	   teclado.next();
