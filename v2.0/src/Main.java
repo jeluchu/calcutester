@@ -39,7 +39,8 @@ public class Main {
     //EXLUSION OF THE LETTERS      
     try {
 	    
-        System.out.println("CALCUTESTER v2.0\n\n");
+        System.out.println("CALCUTESTER v2.0 · VERSION ESTABLE \n");
+	System.out.println("TESTING PERFORMED BY ERIC MARTÍN AND JÉLUCHU\n\n");
         System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
         
         System.out.print("Por favor introduzca el primer operando: ");			
@@ -64,13 +65,9 @@ public class Main {
         System.out.println("┃        Pulsa 0 si deseas salir                                      ┃");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
             
-          
-    
-    	
-     
-      System.out.print("┃            Escribe una de las opciones: ");
-      opcion = teclado.nextInt();
-      System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+      	System.out.print("┃            Escribe una de las opciones: ");
+      	opcion = teclado.nextInt();
+      	System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
   
    switch (opcion) {
 	
@@ -133,7 +130,7 @@ public class Main {
 		salir=true;
     break;
 		 
-    default:System.out.println("Introduzca una opción de las anteriores, por favor");
+    default:System.out.println("Por favor, introduzca una de las opciones marcadas");
     break;
 		 
    }//END SWITCH
