@@ -79,31 +79,31 @@ public class Main {
 	
     case 1: //ADDITION
     	  resultado = numero1+numero2;
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("El resultado de la suma es: " + resultado);
     	
     break;
 		 
     case 2: //SUBTRACTION
     	  resultado = numero1-numero2;
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("El resultado de la resta es: " + resultado);
 	break;
 		 
     case 3: //MULTIPLICATION
     	  resultado = numero1*numero2;
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("El resultado de la multiplicación es: " + resultado);
     break;
 		 
     case 4: //DIVISION
     	  if (numero2 !=0) {
 			resultado = numero1/numero2;
-    	    System.out.println("El resultado de la operación es: " + resultado);}
+    	    System.out.println("El resultado de la divión es: " + resultado);}
     	  else 
-			System.out.println("No es posible realizar la division por 0.\n");
+			System.out.println("No es posible realizar la division por 0\n");
     break;
 		 
     case 5: //POWERS
     	  resultado= Math.pow(numero1, numero2);
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("El resultado de la potencia es de: " + resultado);
     break;
 		 
     case 6: //SQUARE ROOTS
@@ -118,7 +118,7 @@ public class Main {
   			numero1--;
 		}
 		resultado=factorial;
-		System.out.println("El resultado de la operación es: " + resultado);
+		System.out.println("El resultado de los factoriales es: " + resultado);
 		break;
 		 
 		 
@@ -127,7 +127,7 @@ public class Main {
 		System.out.print("Por favor introduzca la base deseada: ");
 		int base=teclado.nextInt();
 		resultado =(Math.log(numero1)/Math.log(base));
-		System.out.println("El resultado de la operación es: " + resultado);
+		System.out.println("El resultado del logaritmo es: " + resultado);
 	break;
 		
 	case 0: //EXIT
