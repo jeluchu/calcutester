@@ -39,6 +39,8 @@ public class Main {
     	//CLEAN
     	System.out.print("\033[H\033[2J");
     	System.out.flush();
+	      
+	//EXLUSION OF THE LETTERS      
     try {
         System.out.println("CALCUTESTER v2.0\n\n");
         System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
@@ -143,7 +145,7 @@ public class Main {
 	   System.out.print("|\t      Presiona la tecla Enter para continuar");
 	   teclado.nextLine();
 	 } 
-   
+   //ERROR OF CHARACTERS
       System.out.print("|     Presiona la tecla Enter para continuar");
       teclado.nextLine(); 
   
