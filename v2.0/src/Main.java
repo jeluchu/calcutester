@@ -1,5 +1,3 @@
-
-
 /**
 *
 * @author Eric Martin / Jesus Calderon
@@ -11,11 +9,9 @@ import java.lang.Math;
 
 public class Main {
 
-	
 	private static Scanner teclado;
 
 	public static void main(String[] args)  {
-		
 		
 		//WE IMPORT THE DATA SCANNER
 		teclado = new Scanner(System.in);
@@ -72,7 +68,7 @@ public class Main {
     
     	
      
-      System.out.print("|            Escribe una de las opciones: ");
+      System.out.print("┃            Escribe una de las opciones: ");
       opcion = teclado.nextInt();
       System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
   
@@ -80,37 +76,37 @@ public class Main {
 	
     case 1: //ADDITION
     	  resultado = numero1+numero2;
-    	  System.out.println("El resultado de la suma es: " + resultado);
+    	  System.out.println("┃            El resultado de la suma es: " + resultado);
     	
     break;
 		 
     case 2: //SUBTRACTION
     	  resultado = numero1-numero2;
-    	  System.out.println("El resultado de la resta es: " + resultado);
+    	  System.out.println("┃            El resultado de la resta es: " + resultado);
 	break;
 		 
     case 3: //MULTIPLICATION
     	  resultado = numero1*numero2;
-    	  System.out.println("El resultado de la multiplicación es: " + resultado);
+    	  System.out.println("┃            El resultado de la multiplicación es: " + resultado);
     break;
 		 
     case 4: //DIVISION
     	  if (numero2 !=0) {
 		resultado = numero1/numero2;
-    	    	System.out.println("El resultado de la divión es: " + resultado);}
+    	    	System.out.println("┃            El resultado de la divión es: " + resultado);}
     	  else 
-		System.out.println("No es posible realizar la division por 0\n");
+		System.out.println("┃            No es posible realizar la division por 0\n");
     break;
 		 
     case 5: //POWERS
     	  resultado= Math.pow(numero1, numero2);
-    	  System.out.println("El resultado de la potencia es de: " + resultado);
+    	  System.out.println("┃            El resultado de la potencia es de: " + resultado);
     break;
 		 
     case 6: //SQUARE ROOTS
-    	  System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
-      	  System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
-	  System.out.println("Raiz cuadrada de ("Math.pow(numero1, 1/numero2)");
+    	  System.out.println("┃            Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
+      	  System.out.println("┃            Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
+	  System.out.println("┃            Raiz cuadrada de ("Math.pow(numero1, 1/numero2)");
     break;
 		 
     case 7: //FACTORIAL
@@ -120,7 +116,7 @@ public class Main {
   		numero1--;
 	  }
 	  resultado=factorial;
-	  System.out.println("El resultado de los factoriales es: " + resultado);
+	  System.out.println("┃            El resultado de los factoriales es: " + resultado);
     break;
 		 
 		 
@@ -143,13 +139,13 @@ public class Main {
    }//END SWITCH
 			     
    } catch (InputMismatchException e) {
-	   System.out.println("|\t      Tienes que insertar un número\n");
+	   System.out.println("┃            Tienes que insertar un número\n");
 	   teclado.next();
-	   System.out.print("|\t      Presiona la tecla Enter para continuar");
+	   System.out.print("┃            Presiona la tecla Enter para continuar");
 	   teclado.nextLine();
 	 } 
    //ERROR OF CHARACTERS
-      System.out.print("|     Presiona la tecla Enter para continuar");
+      System.out.print("┃            Presiona la tecla Enter para continuar");
       teclado.nextLine(); 
   
 	}
