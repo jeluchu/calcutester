@@ -109,7 +109,8 @@ public class Main {
     case 6: //SQUARE ROOTS
     	  System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
       	  System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
-	break;
+	  System.out.println("Raiz cuadrada de ("Math.pow(numero1, 1/numero2)");
+    break;
 		 
 	case 7: //FACTORIAL
 		System.out.println("Se procedera a calcular el factorial del primer numero...");
