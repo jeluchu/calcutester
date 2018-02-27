@@ -1,26 +1,29 @@
+
+
 /**
 *
 * @author Eric Martin / Jesus Calderon
-* @version 1.0
+* @version 2.0
 */
 
 import java.util.*;
 import java.lang.Math;
 
-public class main {
+public class Main {
 
 	
+	private static Scanner teclado;
+
 	public static void main(String[] args)  {
 		
+		
 		//WE IMPORT THE DATA SCANNER
-		Scanner sn = new Scanner(System.in);
-		Scanner waitForKeypress = new Scanner(System.in);
-		Scanner teclado = new Scanner(System.in);
+		teclado = new Scanner(System.in);
         		
        	boolean salir = false;
         int opcion;
         
-		double numero1, numero2, resultado;
+		double numero1, numero2, resultado=0;
 		double factorial = 1;
 		
 		String ANSI_RED_BACKGROUND = "\u001B[41m";
@@ -36,8 +39,8 @@ public class main {
     	//CLEAN
     	System.out.print("\033[H\033[2J");
     	System.out.flush();
-    	
-        System.out.println("CALCUTESTER v0.1\n\n");
+    try {
+        System.out.println("CALCUTESTER v2.0\n\n");
         System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
         
         System.out.print("Por favor introduzca el primer operando: ");			
@@ -65,68 +68,85 @@ public class main {
           
     
     	
-    
+     
       System.out.print("|            Escribe una de las opciones: ");
-      opcion = sn.nextInt();
+      opcion = teclado.nextInt();
       System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
   
-      switch (opcion) {
+   switch (opcion) {
 	
-      case 1:
+    case 1: //ADDITION
     	  resultado = numero1+numero2;
-    	  System.out.println("El resultado de la suma es " + resultado);
-      break;
+    	  System.out.println("El resultado de la operación es: " + resultado);
+    	
+    break;
 		 
-      case 2:
+    case 2: //SUBTRACTION
     	  resultado = numero1-numero2;
-    	  System.out.println("El resultado de la resta es " + resultado);
-	  break;
+    	  System.out.println("El resultado de la operación es: " + resultado);
+	break;
 		 
-      case 3:
+    case 3: //MULTIPLICATION
     	  resultado = numero1*numero2;
-      break;
+    	  System.out.println("El resultado de la operación es: " + resultado);
+    break;
 		 
-      case 4: 
-    	  if (numero2 !=0)
+    case 4: //DIVISION
+    	  if (numero2 !=0) {
 			resultado = numero1/numero2;
+    	    System.out.println("El resultado de la operación es: " + resultado);}
     	  else 
 			System.out.println("No es posible realizar la division por 0.\n");
-      break;
+    break;
 		 
-      case 5:
+    case 5: //POWERS
     	  resultado= Math.pow(numero1, numero2);
-      break;
+    	  System.out.println("El resultado de la operación es: " + resultado);
+    break;
 		 
-      case 6: 
+    case 6: //SQUARE ROOTS
     	  System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
       	  System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
-	  break;
+	break;
 		 
-	case 7: System.out.println("Se procedera a calcular el factorial del primer numero...");
+	case 7: //FACTORIAL
+		System.out.println("Se procedera a calcular el factorial del primer numero...");
 		while ( numero1!=0) {
   			factorial=factorial*numero1;
   			numero1--;
 		}
 		resultado=factorial;
+		System.out.println("El resultado de la operación es: " + resultado);
 		break;
 		 
 		 
-	case 8:	 /*(Math.log(num)/Math.log(2));*/
-		 break;
+	case 8:	//LOGARITHM
+		System.out.println("Vamos a calcular el logaritmo del primer numero");
+		System.out.print("Por favor introduzca la base deseada: ");
+		int base=teclado.nextInt();
+		resultado =(Math.log(numero1)/Math.log(base));
+		System.out.println("El resultado de la operación es: " + resultado);
+	break;
 		
-	case 0: System.out.println("Gracias por utilizar nuestra calculadora");
+	case 0: //EXIT
+		System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
-		break;
+	break;
 		 
 	default:System.out.println("Introduzca una opción de las anteriores, por favor");
-		break;
+	break;
 		 
-	}//fin switch
-    
+   }//END SWITCH
+   } catch (InputMismatchException e) {
+	   System.out.println("|\t      Tienes que insertar un número\n");
+	   teclado.next();
+	   System.out.print("|\t      Presiona la tecla Enter para continuar");
+	   teclado.nextLine();
+	 } 
+   
       System.out.print("|     Presiona la tecla Enter para continuar");
-      waitForKeypress.nextLine(); 
-	
-    
+      teclado.nextLine(); 
+  
 	}
-}
+	}
 }
