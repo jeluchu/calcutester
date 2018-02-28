@@ -1,5 +1,3 @@
-
-
 /**
 *
 * @author Eric Martin / Jesus Calderon
@@ -11,11 +9,9 @@ import java.lang.Math;
 
 public class Main {
 
-	
 	private static Scanner teclado;
 
 	public static void main(String[] args)  {
-		
 		
 		//WE IMPORT THE DATA SCANNER
 		teclado = new Scanner(System.in);
@@ -39,8 +35,12 @@ public class Main {
     	//CLEAN
     	System.out.print("\033[H\033[2J");
     	System.out.flush();
+	      
+    //EXLUSION OF THE LETTERS      
     try {
-        System.out.println("CALCUTESTER v2.0\n\n");
+	    
+        System.out.println("CALCUTESTER v2.0 · VERSION ESTABLE \n");
+	System.out.println("TESTING PERFORMED BY ERIC MARTÍN AND JÉLUCHU\n\n");
         System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
         
         System.out.print("Por favor introduzca el primer operando: ");			
@@ -65,86 +65,84 @@ public class Main {
         System.out.println("┃        Pulsa 0 si deseas salir                                      ┃");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
             
-          
-    
-    	
-     
-      System.out.print("|            Escribe una de las opciones: ");
-      opcion = teclado.nextInt();
-      System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+      	System.out.print("┃            Escribe una de las opciones: ");
+      	opcion = teclado.nextInt();
+      	System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
   
    switch (opcion) {
 	
     case 1: //ADDITION
     	  resultado = numero1+numero2;
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("┃            El resultado de la suma es: " + resultado);
     	
     break;
 		 
     case 2: //SUBTRACTION
     	  resultado = numero1-numero2;
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("┃            El resultado de la resta es: " + resultado);
 	break;
 		 
     case 3: //MULTIPLICATION
     	  resultado = numero1*numero2;
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("┃            El resultado de la multiplicación es: " + resultado);
     break;
 		 
     case 4: //DIVISION
     	  if (numero2 !=0) {
-			resultado = numero1/numero2;
-    	    System.out.println("El resultado de la operación es: " + resultado);}
+		resultado = numero1/numero2;
+    	    	System.out.println("┃            El resultado de la divión es: " + resultado);}
     	  else 
-			System.out.println("No es posible realizar la division por 0.\n");
+		System.out.println("┃            No es posible realizar la division por 0\n");
     break;
 		 
     case 5: //POWERS
     	  resultado= Math.pow(numero1, numero2);
-    	  System.out.println("El resultado de la operación es: " + resultado);
+    	  System.out.println("┃            El resultado de la potencia es de: " + resultado);
     break;
 		 
     case 6: //SQUARE ROOTS
-    	  System.out.println("Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
-      	  System.out.println("Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
-	break;
+    	  System.out.println("┃            Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
+      	  System.out.println("┃            Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
+	  System.out.println("┃            Raiz cuadrada de ("Math.pow(numero1, 1/numero2)");
+    break;
 		 
-	case 7: //FACTORIAL
-		System.out.println("Se procedera a calcular el factorial del primer numero...");
-		while ( numero1!=0) {
-  			factorial=factorial*numero1;
-  			numero1--;
-		}
-		resultado=factorial;
-		System.out.println("El resultado de la operación es: " + resultado);
-		break;
+    case 7: //FACTORIAL
+	  System.out.println("Se procedera a calcular el factorial del primer numero...");
+	  while ( numero1!=0) {
+  		factorial=factorial*numero1;
+  		numero1--;
+	  }
+	  resultado=factorial;
+	  System.out.println("┃            El resultado de los factoriales es: " + resultado);
+    break;
 		 
 		 
-	case 8:	//LOGARITHM
-		System.out.println("Vamos a calcular el logaritmo del primer numero");
-		System.out.print("Por favor introduzca la base deseada: ");
-		int base=teclado.nextInt();
-		resultado =(Math.log(numero1)/Math.log(base));
-		System.out.println("El resultado de la operación es: " + resultado);
-	break;
+    case 8://LOGARITHM
+	  System.out.println("Vamos a calcular el logaritmo del primer numero");
+	  System.out.print("Por favor introduzca la base deseada: ");
+	  int base=teclado.nextInt();
+	  resultado =(Math.log(numero1)/Math.log(base));
+	  System.out.println("El resultado del logaritmo es: " + resultado);
+    break;
 		
-	case 0: //EXIT
+    case 0: //EXIT
 		System.out.println("Gracias por utilizar nuestra calculadora");
 		salir=true;
-	break;
+    break;
 		 
-	default:System.out.println("Introduzca una opción de las anteriores, por favor");
-	break;
+    default:System.out.println("Por favor, introduzca una de las opciones marcadas");
+    break;
 		 
    }//END SWITCH
+			     
    } catch (InputMismatchException e) {
-	   System.out.println("|\t      Tienes que insertar un número\n");
+	   System.out.println("┃            Tienes que insertar un número\n");
 	   teclado.next();
-	   System.out.print("|\t      Presiona la tecla Enter para continuar");
+	   System.out.print("┃            Presiona la tecla Enter para continuar");
 	   teclado.nextLine();
 	 } 
-   
-      System.out.print("|     Presiona la tecla Enter para continuar");
+   //ERROR OF CHARACTERS
+      System.out.print("┃            Presiona la tecla Enter para continuar");
       teclado.nextLine(); 
   
 	}
