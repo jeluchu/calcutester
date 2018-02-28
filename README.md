@@ -15,3 +15,6 @@
 
 Si quieres ver más a fondo los cambios y las actualizaciones de cada versión, puedes pinchar en "**Release**", para ver más detalladamente los errores corregidos y las nuevas funciones añadidas.
 
+![Icono GDM](./fotos/eric.png)
+![Icono GDM](./fotos/jelu.png)
+
