@@ -6,6 +6,7 @@
 
 import java.util.*;
 import java.lang.Math;
+import java.io.*;
 
 public class Main {
 
@@ -18,18 +19,13 @@ public class Main {
         		
        	boolean salir = false;
         int opcion;
-        
+        char letra; 
 		double numero1, numero2, resultado=0;
 		double factorial = 1;
 		
-		String ANSI_RED_BACKGROUND = "\u001B[41m";
-		String ROJO = "\u001B[1;31m";
 		String NORMAL = "\u001B[0m";
-		String AMARILLO = "\u001B[1;33m";
-		String VERDE = "\u001B[1;32m";
 		String AZUL = "\u001B[1;34m";
-		String NEGRITA = "\u001B[1m";
-		String AZULETE = "\u001B[1;36m";
+
 		
       while (!salir) {
     	//CLEAN
@@ -40,7 +36,7 @@ public class Main {
     try {
 	    
         System.out.println("CALCUTESTER v2.0 · VERSION ESTABLE \n");
-	System.out.println("TESTING PERFORMED BY ERIC MARTÍN AND JÉLUCHU\n\n");
+	    System.out.println("TESTING PERFORMED BY ERIC MARTÍN AND JÉLUCHU\n\n");
         System.out.println("Vamos a empezar introduciendo los digitos, pueden ser enteros o decimales:");
         
         System.out.print("Por favor introduzca el primer operando: ");			
@@ -103,7 +99,7 @@ public class Main {
     case 6: //SQUARE ROOTS
     	  System.out.println("┃            Raiz cuadrada de (" + numero1 + ")=" + Math.sqrt(numero1));
       	  System.out.println("┃            Raiz cuadrada de (" + numero2 + ")=" + Math.sqrt(numero2));
-	  System.out.println("┃            Raiz cuadrada de ("Math.pow(numero1, 1/numero2)");
+	  System.out.println("┃            Raiz cuadrada de "+(Math.pow(numero1, 1/numero2)));
     break;
 		 
     case 7: //FACTORIAL
@@ -141,10 +137,27 @@ public class Main {
 	   System.out.print("┃            Presiona la tecla Enter para continuar");
 	   teclado.nextLine();
 	 } 
+    
+    System.out.print("┃           Si desea guardar el resultado en un documento de texto presione S (save)");
+    letra= teclado.next().charAt(0);
+        if ((letra=='S')||(letra == 's')) {
+    try {
+    	File archivo=new File("resultados.txt");
+    	PrintWriter print = new PrintWriter(archivo);
+    	print.println(resultado);
+    	print.flush();
+    	print.close();
+    	System.out.println("┃         \n┃              El resultado se grabó correctamente.  ");
+    			
+	}catch(IOException e){e.getMessage();}
+    
+   }//fin if
    //ERROR OF CHARACTERS
       System.out.print("┃            Presiona la tecla Enter para continuar");
       teclado.nextLine(); 
-  
+      
 	}
-	}
+  }
 }
+
+      
