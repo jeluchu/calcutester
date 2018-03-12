@@ -1,0 +1,72 @@
+dado que el tipo de datos utilizados está declarado como double, es decir, utiliza 64 bits 
+tendremos las siguientes pruebas:
+
+1-Operacion SUMA: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango		nok
+	//comprobaremos si el signo del resultado corresponde con el esperado según los operandos
+	//comprobaremos que si sumamos un 0, el resultado es igual al segundo operando 
+
+2-Operacion RESTA: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos si el signo del resultado corresponde con el esperado según los operandos
+	//comprobaremos que si restamos un 0, el resultado es igual al primer operando
+
+3-Operacion MULTIPLICACION: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos si el signo del resultado corresponde con el esperado según los operandos
+	//comprobaremos que si multiplicamos por 0, el resultado es igual a cero
+
+4-Operacion DIVISION: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos si el signo del resultado corresponde con el esperado según los operandos
+	//comprobaremos que si dividimos por 0, el programa muestra un mensaje de error.
+
+5-Operacion POTENCIA: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos si el signo del resultado corresponde con el esperado según la base y exponente par/impar
+	//comprobaremos que si elevamos la potencia a 0, el resultado es igual a uno
+
+
+6-Operacion RAIZ: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos si la funcion calcula el resultado para diferentes radicandos y diferentes bases
+	//comprobaremos que si hacemos la raiz enésima de 1 da como resultado 1
+	//comprobaremos que si hacemos la raiz enésima de 0 da como resultado 0
+
+
+7-Operacion FACTORIAL: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos que si hacemos el factorial de 0 da como resultado 1 ok
+	
+
+8-Operacion LOGARITMO: 
+
+	introduciremos valores desde 2.23e-308 hasta 1.79e308	ok
+	introduciremos valores por debajo del rango		nok
+	introduciremos valores por encima del rango 		nok
+	//comprobaremos que si hacemos el logaritmo de un numero menor que 0 el programa muestra un mensaje de error.
+
+prueba final, comprobaremos que el programa crea un fichero con los resultados obtenidos 
+
+
