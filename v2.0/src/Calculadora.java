@@ -8,7 +8,7 @@ import java.util.*;
 import java.lang.Math;
 import java.io.*;
 
-public class Main {
+public class Calculadora {
 
 	private static Scanner teclado;
 
